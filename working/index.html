@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A simple translation tool powered by Google Translate. Translate text between 100+ languages instantly." />
+  <title>Translation Tool — CodeAlpha</title>
+  <link rel="stylesheet" href="../Design/style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Translation Tool</h1>
+    <p>CodeAlpha project-1</p>
+  </header>
+
+  <main class="translator">
+    <div class="lang-bar">
+      <select id="source-lang" aria-label="Source language">
+        <option value="auto" selected>Detect Language</option>
+      </select>
+
+      <button class="swap-btn" id="swap-btn" title="Swap languages" aria-label="Swap languages">⇄</button>
+
+      <select id="target-lang" aria-label="Target language"></select>
+    </div>
+
+    <div class="text-panels">
+      <div class="panel">
+        <span class="panel-label">Input</span>
+        <button class="clear-btn" id="clear-btn" title="Clear">✕</button>
+        <textarea id="input-text" placeholder="Type or paste text here…" spellcheck="false"></textarea>
+        <div class="panel-footer">
+          <span class="char-count" id="char-count">0 characters</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <span class="panel-label">Translation</span>
+        <textarea id="output-text" placeholder="Translation will appear here…" readonly></textarea>
+        <div class="panel-footer">
+          <span></span>
+          <button class="copy-btn" id="copy-btn" title="Copy translation">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            Copy
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="action-bar">
+      <button class="translate-btn" id="translate-btn">Translate</button>
+      <span class="status-msg" id="status-msg"></span>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
